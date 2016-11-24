@@ -30,14 +30,20 @@ findMinMax:function (arr){
         if(arr[i] > maxValue){  
           maxValue = arr[i];  
         }
-
         else if(arr[i] < minValue){  
           minValue = arr[i];  
         }  
-        
-     
-      return [minValue,maxValue]}
-} ,
+       }
+       if(minValue==maxValue){
+        minMax.push(minValue);
+       }
+       else{
+          minMax.push(minValue);
+      minMax.push(maxValue);
+  }
+      
+      return minMax;
+},
 
 fizzBuzz: function(num) {
   if (num % 15 === 0){
